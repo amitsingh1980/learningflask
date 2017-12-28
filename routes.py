@@ -3,7 +3,9 @@ from forms import SignupForm
 from models import db
 
 tasker = Flask(__name__)
-tasker.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/learningflask'
+#postgres://atlxhdlrnkajnh:6e235273ac61d8e42912823e632018f715f24d1807df14ec098cccf4b9a0b00c@ec2-54-163-233-103.compute-1.amazonaws.com:5432/ddnftacagsaq27
+#postgresql://localhost/learningflask
+tasker.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://atlxhdlrnkajnh:6e235273ac61d8e42912823e632018f715f24d1807df14ec098cccf4b9a0b00c@ec2-54-163-233-103.compute-1.amazonaws.com:5432/ddnftacagsaq27'
 tasker.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 tasker.secret_key = "development-key"
 db.init_app(tasker)
