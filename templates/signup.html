@@ -5,10 +5,20 @@
         <form method="POST" action="/signup">
             {{ form.hidden_tag() }}
             <div class="form-group">
-                {{ form.Name.label }} {{ form.Name }}
+                {{ form.Name.label }} {{ form.Name }} {% if form.Name.errors %} {% for error in form.Name.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %} {% endif %}
             </div>
             <div class="form-group">
-                {{ form.Email.label }} {{ form.Email }}
+                {{ form.Email.label }} {{ form.Email }} {% if form.Email.errors %} {% for error in form.Email.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %} {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.Address.label }} {{ form.Address }} {% if form.Address.errors %} {% for error in form.Address.errors %}
+                <p class="error-message">{{ error }}</p>
+                {% endfor %} {% endif %}
             </div>
             {{ form.submit(class="btn btn-primary") }}
         </form>

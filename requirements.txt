@@ -13,3 +13,4 @@ pylint==1.8.1
 six==1.11.0
 Werkzeug==0.12.2
 wrapt==1.10.11
+psycopg2==2.7.3.2
