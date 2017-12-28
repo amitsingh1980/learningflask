@@ -7,3 +7,7 @@ class SignupForm(Form):
     Email = StringField('Email', validators=[DataRequired("Please enter your Email"), Email("Please enter valid email address")])
     Address = StringField('Address', validators=[DataRequired("Please enter your Address")])
     submit = SubmitField('Sign Up')
+
+class LoginForm(Form):
+    Email = StringField('Email', validators=[DataRequired("Please enter your email address"), Email("Please enter valid email address")])
+    submit = SubmitField('Log In')    
