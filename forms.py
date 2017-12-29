@@ -11,3 +11,9 @@ class SignupForm(Form):
 class LoginForm(Form):
     Email = StringField('Email', validators=[DataRequired("Please enter your email address"), Email("Please enter valid email address")])
     submit = SubmitField('Log In')    
+
+class AddressForm(Form):
+    Address = StringField('Address', validators=[DataRequired("Please enter valid address"), Length(min=5,  max=50, message="Please enter valid address between 5 and 50 characters.")])
+    submit = SubmitField('Search')
+
+    
